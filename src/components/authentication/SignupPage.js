@@ -21,7 +21,7 @@ function SignupPage() {
     e.preventDefault();
     console.log(signupState);
     if(signupState.password !== signupState.confirmPassword){
-      alert(` ${signupState.confirmPassword} Password and ${signupState.password} Confirm Password should be same`)
+      alert(`Password and Confirm Password should be same`)
       
     }else{
       createAccount();
@@ -37,7 +37,7 @@ function SignupPage() {
         // Signed in
         const user = userCredential.user;
         console.log(user);
-        navigate("/")
+        navigate("/dashboard")
        
     })
     .catch((error) => {
